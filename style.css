@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#open-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 80px;
+    background-color: #10B981;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .passwordGeneratorPopup {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.passwordGeneratorPopup.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+    width: 550px;
+    min-height: 550px;
+    background-color: #1F2937;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: ease-in;
+} */
+
+.passwordGeneratorPopup {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    width: 100%;
+    max-width: 550px;
+    min-height: 550px;
+    background-color: #1F2937;
+    border-radius: 8px;
+}
+
+.passwordGeneratorPopup.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;    
+    padding: 115px 52px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "Karla", sans-serif;
+    color: white;
+}
+
+h1 span {
+    color: #4ADF86;
+}
+
+p {
+    color: #D5D4D8;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Inter';
+}
+
+#passwordGeneratorBtn {
+    width: 191px;
+    height: 42px;
+    background-color: #10B981;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 51px;
+}
+
+.line {
+    width: 100%;
+    height: 0.5px;
+    background-color: #d5d4d87b;
+    margin-top: 35px;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.password-container :where(.password-field1, .password-field2) {
+    width: 211px;
+    height: 39px;
+    background-color: #273549;
+    border-radius: 6px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Inter';
+    color: #10B981;
+}
+
+.functionalities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#passwordGeneratorLength {
+    width: 211px;
+    height: 41px;
+    margin-top: 51px;
+    border: none;
+    border-radius: 6px;
+    color: #10B981;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#passwordGeneratorLength::placeholder {
+    color: #87868b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Inter';
+    padding: 15px;
+}

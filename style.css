@@ -154,3 +154,31 @@ p {
     font-family: 'Inter';
     padding: 15px;
 }
+
+@media(max-width:550px) {
+    .functionalities {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .password-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+}
+
+@media(min-width:550px) {
+    .functionalities {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .password-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}

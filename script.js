@@ -18,25 +18,34 @@ function passwordGenerator() {
     let inputNumber = document.getElementById('passwordGeneratorLength')
     let inputValue = inputNumber.value
 
+    firstPassword.textContent = ''
+    secondPassword.textContent = ''
+
     for (let i = 0; i < inputValue; i++) {
-        if (firstPassword.textContent.length < inputValue && secondPassword.textContent.length < inputValue ) {
-            let firstRandomizer = Math.floor( Math.random() * characters.length )  
-            firstPassword.textContent += characters[firstRandomizer]
-            let secondRandomizer = Math.floor( Math.random() * characters.length )  
-            secondPassword.textContent += characters[secondRandomizer]
-        } else {
-            let firstRandomizer = Math.floor( Math.random() * characters.length )  
-            firstPassword.textContent = characters[firstRandomizer]
-            let secondRandomizer = Math.floor( Math.random() * characters.length )  
-            secondPassword.textContent = characters[secondRandomizer]
-        }
+       let firstRandomizer = Math.floor( Math.random() * inputValue)
+       let secondRandomizer = Math.floor( Math.random() * inputValue)
 
-        
-        
+       firstPassword.textContent += characters[firstRandomizer]
+       secondPassword.textContent += characters[secondRandomizer]
     }
-    
-
 }
+
+// function passwordGenerator() {
+//     let inputNumber = document.getElementById('passwordGeneratorLength');
+//     let inputValue = parseInt(inputNumber.value, 10); // Ensure inputValue is an integer
+
+//     // Reset the password fields
+//     firstPassword.textContent = '';
+//     secondPassword.textContent = '';
+
+//     for (let i = 0; i < inputValue; i++) {
+//         let firstRandomizer = Math.floor(Math.random() * characters.length);
+//         let secondRandomizer = Math.floor(Math.random() * characters.length);
+        
+//         firstPassword.textContent += characters[firstRandomizer];
+//         secondPassword.textContent += characters[secondRandomizer];
+//     }
+// }
 
 firstPassword.addEventListener('click', function () {
     copyToClipboard(firstPassword.textContent);

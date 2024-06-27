@@ -22,8 +22,8 @@ function passwordGenerator() {
     secondPassword.textContent = ''
 
     for (let i = 0; i < inputValue; i++) {
-       let firstRandomizer = Math.floor( Math.random() * inputValue)
-       let secondRandomizer = Math.floor( Math.random() * inputValue)
+       let firstRandomizer = Math.floor( Math.random() * characters.length)
+       let secondRandomizer = Math.floor( Math.random() * characters.length)
 
        firstPassword.textContent += characters[firstRandomizer]
        secondPassword.textContent += characters[secondRandomizer]
